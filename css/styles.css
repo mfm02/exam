@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Monoton&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 1rem 2rem;
+    font-family: Lato;
+}
+
+/* Pre-Header */
+.pre-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social{
+    display: flex;
+    justify-content: space-between;
+}
+.social i{
+    padding: 0 10%;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid grey;
+    position: sticky;
+}
+
+.iconsBox{
+    display: flex;
+    margin-right: 1.5rem;
+}
+.iconsBox i{
+    padding: 0 10%;
+}
+
+/* Nav */
+nav{
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+
+nav a{
+    padding: 0 1%;
+    text-decoration: none;
+    color: black;
+}
+.men{
+    position: relative;
+}
+.men:hover .submenu{
+    display: block;
+}
+.submenu{
+    width: 110px;
+    display: none;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    z-index: 5;
+}
+.submenu a{
+    display: block;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+/* Section */
+section{
+    background: url(../images/banners/banner-1.jpg) no-repeat;
+    background-size: cover;
+    margin: 0.5rem 0;
+}
+section h1{
+    font-family: Monoton;
+}
+.trending{
+    padding: 2rem;
+}
+.trending h1{
+    font-style: bolder;
+}
+.trending button{
+    margin-top: 1rem;
+    padding: 0.3rem;
+}
+
+/* Main */
+.cards{
+    display: grid;
+    grid-template-areas:
+    'product product product product'
+    'card1 card2 card3 card4' 
+    'card5 card6 card7 card8'
+    ;
+    gap: 1rem;
+    margin-top: 1rem;
+    height: 50vh;
+}
+.productos{grid-area: product;}
+.card1{grid-area: card1;}
+.card2{grid-area: card2;}
+.card3{grid-area: card3;}
+.card4{grid-area: card4;}
+.card5{grid-area: card5;}
+.card6{grid-area: card6;}
+.card7{grid-area: card7;}
+.card8{grid-area: card8;}
+
+.card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8{
+    border: 1px solid black;
+}
+
+.cards>div, h5, p{
+    padding: 0 0.5rem;
+}
+.cards i:first-child{
+    padding-left: 0.5rem;
+}
+
+.photo{
+    width: 15rem;
+    height: 15rem;
+}
+.photo img{
+    max-width: 100%;
+}
+
+.shopping{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.price{
+    display: flex;
+        font-weight: bold;
+}
+.old-price{
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30rem;
+    padding: 1rem;
+    border-bottom: 2px solid grey;
+}
+footer h3{
+    color: white;
+    font-weight: lighter;
+    border-bottom: 2px outset orange;
+}
+footer p{
+    text-align: left;
+    color: grey;
+}
+
+/* Post-Footer */
+.post-footer{
+    background-color: black;
+    padding: 0.5rem 0;
+    color: white;
+    text-align: center;
+}
+
+
+@media only screen and (max-width:560px){
+    section{
+        display: none;
+    }
+    .cards{
+        display: grid;
+        grid-template-areas:
+        'product product '
+        'card1 card2'
+        'card3 card4' 
+        'card5 card6'
+        'card7 card8'
+        ;
+        gap: 1rem;
+        margin-top: 1rem;
+        height: 10vh;
+    }
+    .photo{
+        width: 13rem;
+    }
+    footer{
+        margin-top: 92rem;
+    }
+}
